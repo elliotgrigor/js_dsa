@@ -7,12 +7,15 @@
  * Must have linear time complexity -- O(n)
  */
 
-function validAnagram() {
+function validAnagram(str1, str2) {
   /**
    * 1. loop over both strings
    * 2. increment each letter's appearance
-   * 3. save to independent data structures
-   * 4. compare each data structure for matching quantities of characters
+   * 3. save each letter from each string as key in object literal with similar
+   *    but different keys
+   * 4. compare each matching keyval for matching quantities of characters
+   *
+   * e.g. { 'a': 1, 'a2': 1 } -- compare keyval ['a'] to keyval ['a' + '2']
    */
 }
 
