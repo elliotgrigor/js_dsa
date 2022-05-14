@@ -42,7 +42,7 @@ function squaresMatch(arr1, arr2) {
   console.log(arr1Counter);
   console.log(arr2Counter);
 
-  for (key in arr1Counter) {
+  for (let key in arr1Counter) {
     key = parseInt(key);
 
     if (arr2Counter[key**2] !== arr1Counter[key]) {
