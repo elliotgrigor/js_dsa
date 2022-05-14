@@ -17,6 +17,35 @@ function validAnagram(str1, str2) {
    *
    * e.g. { 'a': 1, 'a2': 1 } -- compare keyval ['a'] to keyval ['a' + '2']
    */
+
+  const letterCounter = {};
+
+  for (let i = 0; i < str1.length; i++) {
+    const key1 = str1[i];
+    const key2 = str2[i] + '2';
+    
+    if (!letterCounter[key1]) {
+      letterCounter[key1] = 1;
+    } else {
+      letterCounter[key1] += 1;
+    }
+
+    if (!letterCounter[key2]) {
+      letterCounter[key2] = 1;
+    } else {
+      letterCounter[key2] += 1;
+    }
+  }
+
+  for (let key in letterCounter) {
+    if (key.length > 1) continue;
+
+    if (letterCounter[key] !== letterCounter[key + '2']) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 validAnagram('', '')               ? console.log(true) : console.log(false); // true
