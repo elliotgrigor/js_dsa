@@ -18,6 +18,11 @@ function countUniqueValues(ascendingNumbers) {
    */
 }
 
-countUniqueValues([]); // 0
-countUniqueValues([1, 1, 1, 1, 1, 2]); // 2
-countUniqueValues([1, 2, 2, 3, 4, 4, 4, 6, 7, 9, 9, 12]); // 8
+const result1 = countUniqueValues(); // 0
+const result2 = countUniqueValues([]); // 0
+const result3 = countUniqueValues([10, 10, 10, 10]); // 1
+const result4 = countUniqueValues([1, 1, 1, 1, 1, 2]); // 2
+const result5 = countUniqueValues([1, 2, 2, 3, 4, 4, 4, 6, 7, 9, 9, 12]); // 8
+const result6 = countUniqueValues([-2, -1, -1, 0, 1]); // 4
+
+console.log('Results:', result1, result2, result3, result4, result5, result6);
