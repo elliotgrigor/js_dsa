@@ -9,7 +9,14 @@
  * Bonus: Constant space complexity is possible -- O(1)
  */
 
-function countUniqueValues(ascendingNumbers) {}
+function countUniqueValues(ascendingNumbers) {
+  /**
+   * 1. Loop over array from start and finish, ignoring head and tail indices
+   * 2. Compare both current values to previous values
+   * 3. Increment unique number counter if they're different
+   * 4. Add 1 to counter for difference in starting values
+   */
+}
 
 countUniqueValues([]); // 0
 countUniqueValues([1, 1, 1, 1, 1, 2]); // 2
