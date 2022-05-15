@@ -16,6 +16,28 @@ function countUniqueValues(ascendingNumbers) {
    * 3. Increment unique number counter if they're different
    * 4. Add 1 to counter for difference in starting values
    */
+
+  let counter = 0;
+
+  if (!ascendingNumbers || !ascendingNumbers.length) return counter;
+
+  let lPtr = 1;
+  let rPtr = ascendingNumbers.length - 2;
+
+  while (lPtr <= rPtr) {
+    const lVal = ascendingNumbers[lPtr];
+    const rVal = ascendingNumbers[rPtr];
+
+    const lPrev = ascendingNumbers[lPtr - 1];
+    const rPrev = ascendingNumbers[rPtr + 1];
+
+    if (lVal !== lPrev) counter += 1;
+    if (rVal !== rPrev) counter += 1;
+
+    lPtr++; rPtr--;
+  }
+
+  return counter + 1;
 }
 
 const result1 = countUniqueValues(); // 0
