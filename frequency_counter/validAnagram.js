@@ -48,6 +48,6 @@ function validAnagram(str1, str2) {
   return true;
 }
 
-validAnagram('', '')               ? console.log(true) : console.log(false); // true
-validAnagram('anagram', 'aaagrmn') ? console.log(true) : console.log(false); // true
-validAnagram('shrek', 'shark')     ? console.log(true) : console.log(false); // false
+console.log(validAnagram('', '')); // true
+console.log(validAnagram('anagram', 'aaagrmn')); // true
+console.log(validAnagram('shrek', 'shark')); // false
