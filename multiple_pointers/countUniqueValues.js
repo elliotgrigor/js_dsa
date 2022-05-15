@@ -1,7 +1,7 @@
 /**
  * Multiple Pointers - Problem 3
  * -----------------------------
- * Implement a funciton which accepts a sorted (ascending) array and returns the
+ * Implement a function which accepts a sorted (ascending) array and returns the
  * number of unique values in the array. There can be negative numbers, but it
  * will always be sorted.
  * 
