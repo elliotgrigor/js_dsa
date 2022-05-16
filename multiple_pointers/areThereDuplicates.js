@@ -1,4 +1,6 @@
 /**
+ * Multiple Pointers/Frequency Counter - Problem 5
+ * -----------------------------------------------
  * Note: This can be solved using either the multiple pointers or frequency
  * counter method.
  * 
