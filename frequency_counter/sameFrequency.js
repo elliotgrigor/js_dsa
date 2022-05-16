@@ -16,7 +16,7 @@ function sameFrequency(num1, num2) {
    *      e.g. 281 -> { '1': 1, '8': 1, '2': 0 }
    *                                         ^ decrement on iter 1
    * 4. Only decrement when keyval > 0
-   * 5. If trying to decrement when keyval < 0, stop comparison
+   * 5. If trying to decrement when keyval < 1, stop comparison
    */
 
   const counter = {};
