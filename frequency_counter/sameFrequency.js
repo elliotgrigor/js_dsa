@@ -18,6 +18,19 @@ function sameFrequency(num1, num2) {
    * 4. Only decrement when keyval > 0
    * 5. If trying to decrement when keyval < 0, stop comparison
    */
+
+  const counter = {};
+
+  for (let numChar of num1.toString()) {
+    counter[numChar] = counter[numChar] + 1 || 1; // if falsey, set to 1
+  }
+
+  for (let numChar of num2.toString()) {
+    if (!counter[numChar] || counter[numChar] < 1) return false;
+    counter[numChar] -= 1;
+  }
+
+  return true;
 }
 
 console.log(sameFrequency(12882, 28821)); // true
