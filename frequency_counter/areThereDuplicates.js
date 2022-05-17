@@ -19,6 +19,16 @@ function areThereDuplicates() {
    * 3. If key already exists with value true, duplicate == true
    * 4. If all values can be assigned true, duplicate == false
    */
+
+  const counter = {};
+
+  for (let val of arguments) {
+    if (counter[val]) return true;
+    // set to true unless already true
+    counter[val] = true;
+  }
+
+  return false;
 }
 
 console.log(areThereDuplicates(1, 2, 3)); // false
