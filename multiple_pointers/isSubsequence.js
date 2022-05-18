@@ -8,7 +8,7 @@
  * Must have linear time complexity O(n + m) and constant space complexity O(1)
  */
 
-function isSubsequence() {}
+function isSubsequence(str1, str2) {}
 
 console.log(isSubsequence('hello', 'hello world')); // true
 console.log(isSubsequence('sing', 'sting')); // true
