@@ -22,6 +22,38 @@ function averagePair(ascendingNumbers, targetAvg) {
    * 8. Once real average matches target, done -> return true
    * 9. Otherwise, no matching average -> return false
    */
+
+  let start;
+
+  for (let idx in ascendingNumbers) {
+    const i = parseInt(idx);
+    const val = ascendingNumbers[i];
+
+    if (val >= targetAvg) {
+      const nextVal = ascendingNumbers[i + 1];
+      if (val === nextVal) return true;
+
+      start = i - 1;
+      break;
+    }
+  }
+
+  if (!start) return false; // targetAvg out of range
+
+  let lPtr = start;
+  let rPtr = start + 1;
+
+  while (lPtr >= 0 && rPtr < ascendingNumbers.length) {
+    const lVal = ascendingNumbers[lPtr];
+    const rVal = ascendingNumbers[rPtr];
+    const avg = (lVal + rVal) / 2;
+
+    if (avg > targetAvg) lPtr--;
+    if (avg < targetAvg) rPtr++;
+    if (avg === targetAvg) return true;
+  }
+
+  return false;
 }
 
 console.log(averagePair([1, 2, 3], 2.5)); // true
