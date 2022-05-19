@@ -8,7 +8,14 @@
  * Must have linear time complexity O(n + m) and constant space complexity O(1)
  */
 
-function isSubsequence(str1, str2) {}
+function isSubsequence(str1, str2) {
+  /**
+   * 1. Loop over str2
+   * 2. Increment second pointer when char doesn't match
+   * 3. If str1 pointer finds char match at n-1, done -> return true
+   * 3. If str2 pointer gets out of range, no subsequence -> return false
+   */
+}
 
 console.log(isSubsequence('hello', 'hello world')); // true
 console.log(isSubsequence('sing', 'sting')); // true
