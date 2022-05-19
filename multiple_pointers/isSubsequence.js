@@ -15,6 +15,22 @@ function isSubsequence(str1, str2) {
    * 3. If str1 pointer finds char match at n-1, done -> return true
    * 3. If str2 pointer gets out of range, no subsequence -> return false
    */
+
+  let [ptr1, ptr2] = [0, 0];
+
+  while (ptr2 < str2.length) {
+    const char1 = str1[ptr1];
+    const char2 = str2[ptr2];
+
+    if (char1 === char2) {
+      if (ptr1 === str1.length - 1) return true;
+      ptr1++;
+    }
+
+    ptr2++;
+  }
+
+  return false;
 }
 
 console.log(isSubsequence('hello', 'hello world')); // true
