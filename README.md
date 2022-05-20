@@ -4,7 +4,7 @@
 
 Comparing performance of algorithms.
 
-- O(n^2) -- *exponential*
+- O(n<sup>2</sup>) -- *exponential*
 - O(n log n)
 - O(n) -- *linear*
 - O(log n)
