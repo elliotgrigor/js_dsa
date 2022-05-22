@@ -13,7 +13,15 @@
  * Must have linear time complexity O(n) and constant space complexity O(1)
  */
 
-function maxSubarraySum(nums, count) {}
+function maxSubarraySum(nums, count) {
+  /**
+   * 1. Find the sum of first group of ${count} length
+   * 2. Start loop at count+1
+   * 3. Add current array value & subtract value outside of current window
+   * 4. Compare current total to max total
+   * 5. If larger, set max to current
+   */
+}
 
 console.log(maxSubarraySum([100, 200, 300, 400], 2)); // 700
 console.log(maxSubarraySum([1, 4, 2, 10, 23, 3, 1, 0, 20], 4)); // 39
