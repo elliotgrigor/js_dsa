@@ -22,6 +22,8 @@ function maxSubarraySum(nums, count) {
    * 5. If larger, set max to current
    */
   
+  if (count > nums.length) return null;
+
   let [max, current] = [0, null];
   let i = 0;
 
