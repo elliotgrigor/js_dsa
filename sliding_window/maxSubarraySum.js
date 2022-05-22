@@ -21,6 +21,27 @@ function maxSubarraySum(nums, count) {
    * 4. Compare current total to max total
    * 5. If larger, set max to current
    */
+  
+  let [max, current] = [0, null];
+  let i = 0;
+
+  while (i < count) {
+    max += nums[i]; i++;
+  }
+
+  current = max;
+
+  for (let j = i; j < nums.length; j++) {
+    const currentVal = nums[j];
+    const outOfRangeVal = nums[j - count];
+
+    current += currentVal;
+    current -= outOfRangeVal;
+
+    if (max < current) max = current;
+  }
+
+  return max;
 }
 
 console.log(maxSubarraySum([100, 200, 300, 400], 2)); // 700
