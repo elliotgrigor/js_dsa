@@ -23,6 +23,39 @@ function minSubarrayLength(nums, target) {
    *      remove first value from the current window
    * 4. If the the end of the window exceeds the array size, stop
    */
+
+  let [windowStart, windowEnd] = [0, 0];
+  let [minWindowSize, tempWindowSize] = [null, 1];
+  let windowTotal = nums[windowStart];
+
+  while (windowStart < nums.length) {
+    if (windowEnd >= nums.length) break;
+
+    if (windowTotal < target) {
+      // increase window size
+      windowEnd++;
+      // track current window size
+      tempWindowSize++;
+      // add 0 if windowEnd out of range (undefined)
+      windowTotal += nums[windowEnd] || 0;
+    }
+
+    if (windowTotal >= target) {
+      if (!minWindowSize || minWindowSize > tempWindowSize) {
+        minWindowSize = tempWindowSize;
+      }
+
+      // shrink window from the left
+      windowTotal -= nums[windowStart];
+      windowStart += 1;
+
+      // decrease window size after shrinking it
+      tempWindowSize -= 1;
+    }
+  }
+
+  // return 0 if target cannot be met
+  return minWindowSize || 0;
 }
 
 console.log(minSubarrayLength([2, 3, 1, 2, 4, 3], 7)); // 2, because [4,3]
