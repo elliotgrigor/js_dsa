@@ -11,7 +11,18 @@
  * Factorial 0 (0!) is always 1.
  */
 
-function factorial(num) {}
+function factorial(num) {
+  /**
+   * 1. If num is 0, return 1
+   * 2. Recursion must stop at 1, so...
+   * 3. If num is 1, return num
+   * 4. Otherwise, multiple num by result of factorial num-1
+   */
+
+  if (num === 0) return 1;
+  if (num === 1) return num;
+  return num * factorial(num - 1);
+}
 
 console.log(factorial(1)); // 1
 console.log(factorial(2)); // 2
