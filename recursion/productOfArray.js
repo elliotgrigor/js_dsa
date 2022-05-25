@@ -7,6 +7,6 @@
 
 function productOfArray(numbers) {}
 
-console.log(productOfArray([6, 3, 10, 11, 9, 16])); // 55
-console.log(productOfArray([-1, 9, 12, 6, -7])); // 19
-console.log(productOfArray([-3, -10, 9, 3, -8])); // -9
+console.log(productOfArray([6, 3, 10, 11, 9, 16])); // 285,120
+console.log(productOfArray([-1, 9, 12, 6, -7])); // 4,536
+console.log(productOfArray([-3, -10, 9, 3, -8])); // -6,480
