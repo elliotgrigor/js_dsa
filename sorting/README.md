@@ -23,3 +23,30 @@ the comparison and swapping of neighbouring elements.
 [5, 9, 12, 17, (19, 3)] -> [5, 9, 12, 17, (3, 19)] // swap
 // etc.
 ```
+
+## Selection Sort
+
+"Smaller" values gradually accumulate at the beginning of the array by
+looking for the lowest value on each pass.
+
+```javascript
+[10, 7, 3, 9, 2, 11, 6];
+```
+```javascript
+[10, 7, 3, 9, 2, 11, 6];
+//   ^ is min? (yes)                 min = 7
+[10, 7, 3, 9, 2, 11, 6];
+//      ^ is min? (yes)              min = 3
+[10, 7, 3, 9, 2, 11, 6];
+//         ^ is min? (no)            min = 3
+[10, 7, 3, 9, 2, 11, 6];
+//            ^ is min? (yes)        min = 2
+[10, 7, 3, 9, 2, 11, 6];
+//               ^ is min? (no)      min = 2
+[10, 7, 3, 9, 2, 11, 6];
+//                   ^ is min? (no)  min = 2
+```
+```javascript
+  [2, 7, 3, 9, 10, 11, 6];
+// ^    swap   ^^
+```
