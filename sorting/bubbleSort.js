@@ -9,14 +9,24 @@ function bubbleSort(arr) {
   let last = arr.length - 1;
 
   while (last > 0) {
+    let swaps = 0;
+
     /* push next largest number to end */
     for (let i = 0; i <= last; i++) {
       if (arr[i] > arr[i + 1]) {
+        swaps++;
         const temp = arr[i + 1];
         arr[i + 1] = arr[i];
         arr[i] = temp;
       }
     }
+
+    /** OPTIMISATION **
+     * if the current pass through the array results in nothing needing
+     * swapped, the array is already sorted -> stop
+     */
+    if (!swaps) break;
+
     /* set new end */
     last--;
   }
