@@ -1,5 +1,5 @@
 /**
- * Sorting - Bubble Sort
+ * Sorting - Insertion Sort
  * ---------------------
  * Write a function which accepts an array of randomly arranged integers
  * and returns the sorted equivalent (ascending).
