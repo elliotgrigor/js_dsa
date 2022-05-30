@@ -7,6 +7,6 @@
 
 function selectionSort(arr) {}
 
-console.log(bubbleSort([])); // []
-console.log(bubbleSort([4, 9, 16, 5, 1])); // [1, 4, 5, 9, 16]
-console.log(bubbleSort([19, 12, 3, -1, 6])); // [-1, 3, 6, 12, 19]
+console.log(selectionSort([])); // []
+console.log(selectionSort([4, 9, 16, 5, 1])); // [1, 4, 5, 9, 16]
+console.log(selectionSort([19, 12, 3, -1, 6])); // [-1, 3, 6, 12, 19]
