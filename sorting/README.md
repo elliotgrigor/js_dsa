@@ -82,3 +82,27 @@ backwards from each value, comparing the value to each previous value.
 //    ^---------^ is smaller?    ---^ move larger up
 // etc.
 ```
+
+## Merge Sort
+
+Takes advantage of the fact that small arrays (<=2) are easy to sort,
+before gradually merging them together.
+
+```javascript
+[3, 44, 38, 5, 47, 15, 36, 26];
+```
+```javascript
+      [3, 44, 38, 5, 47, 15, 36, 26]
+//        |                   |          split
+    [3, 44, 38, 5]     [47, 15, 36, 26]
+//    |        |          |        |      split
+   [3, 44]  [38, 5]   [47, 15]  [36, 26]
+//  |   |    |   |      |   |     |   |    split
+  [3] [44]  [38] [5]  [47] [15] [36] [26]
+//  |   |    |   |      |   |     |   |    sort
+   [3, 44]  [5, 38]   [15, 47]  [26, 36]
+//    |        |          |        |      sort
+    [3, 5, 38, 44]     [15, 26, 36, 47]
+//        |                   |          sort
+      [3, 5, 15, 26, 36, 38, 44, 47]
+```
