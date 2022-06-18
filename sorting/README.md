@@ -106,3 +106,23 @@ before gradually merging them together.
 //        |                   |          sort
       [3, 5, 15, 26, 36, 38, 44, 47]
 ```
+
+## Quick Sort
+
+Moving an element in the data set where all the values before are
+smaller, and all the values after are larger.
+
+```javascript
+[10, 7, 13, 2, 24, 9]
+```
+```javascript
+  [10, 7, 13, 2, 24, 9] -> [10, 7, 2, 9, 13, 24]
+// ^^ pivot point               ^--^--^-- move smaller
+  [10, 7, 2, 9, 13, 24] -> [9, 7, 2, 10, 13, 24]
+// ^^- swap -^             smaller --^^-- larger
+
+  [9, 7, 2, 10, 13, 24] -> [9, 7, 2, 10, 13, 24]
+// ^ new pivot                 ^--^-- move smaller (already sorted)
+  [9, 7, 2, 10, 13, 24] -> [7, 2, 9, 10, 13, 24]
+// ^-----^              smaller --^-- larger
+```
