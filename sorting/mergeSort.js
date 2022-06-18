@@ -40,7 +40,12 @@ function merge(arr1, arr2) {
 console.log(merge([1, 5, 8], [-1, 3, 10, 13])); // [-1, 1, 3, 5, 8, 10, 13]
 
 /* Problem B - Implement sorting algorithm */
-function mergeSort(arr) {}
+function mergeSort(arr) {
+  /**
+   * No idea what's supposed to happen here.
+   * I'll come back to it later... maybe.
+   */
+}
 
 console.log(mergeSort([])); // []
 console.log(mergeSort([4, 9, 16, 5, 1])); // [1, 4, 5, 9, 16]
